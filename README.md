@@ -1,5 +1,5 @@
 # wh40k
-This JSON file is a compilantion of every unit available via datasheets given by GW to download for free.
+This JSON file is a compilation of every unit available via datasheets given by GW to download for free.
 It was extracted using the PDF files, and some crazy PHP code to organize everything.
 This is something that anyone could do using regexp and php shaenanigans.
 
