@@ -1,0 +1,310 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "items": {
+        "properties": {
+            "abilities": {
+                "properties": {
+                    "bracket": {
+                        "properties": {
+                            "effect": {
+                                "type": "string"
+                            },
+                            "max": {
+                                "type": "string"
+                            },
+                            "min": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "effect",
+                            "max",
+                            "min"
+                        ],
+                        "type": "object"
+                    },
+                    "core": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "faction": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "invulnerablesave": {
+                        "items": {
+                            "properties": {
+                                "rules": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "save": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "save"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "left": {
+                        "properties": {
+                            "effects": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "effects",
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "orders": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "unit": {
+                        "items": {
+                            "properties": {
+                                "effect": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "effect",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "wargear": {
+                        "items": {
+                            "properties": {
+                                "effect": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "effect",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "weapons": {
+                        "items": {
+                            "properties": {
+                                "effect": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "effect",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "unit"
+                ],
+                "type": "object"
+            },
+            "factionname": {
+                "type": "string"
+            },
+            "flavortext": {
+                "type": "string"
+            },
+            "keywords": {
+                "items": {
+                    "properties": {
+                        "only": {
+                            "type": "string"
+                        },
+                        "words": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "words"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "stats": {
+                "items": {
+                    "properties": {
+                        "ld": {
+                            "type": "string"
+                        },
+                        "m": {
+                            "type": "string"
+                        },
+                        "oc": {
+                            "type": "string"
+                        },
+                        "sv": {
+                            "type": "string"
+                        },
+                        "t": {
+                            "type": "string"
+                        },
+                        "unit": {
+                            "type": "string"
+                        },
+                        "w": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "ld",
+                        "m",
+                        "oc",
+                        "sv",
+                        "t",
+                        "unit",
+                        "w"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "unitcompo": {
+                "properties": {
+                    "attachedunit": {
+                        "type": "string"
+                    },
+                    "defaultwargear": {
+                        "type": "string"
+                    },
+                    "leader": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "leaderrule": {
+                        "type": "string"
+                    },
+                    "supremecommander": {
+                        "type": "string"
+                    },
+                    "transport": {
+                        "type": "string"
+                    },
+                    "units": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "defaultwargear",
+                    "units"
+                ],
+                "type": "object"
+            },
+            "unitname": {
+                "type": "string"
+            },
+            "wargearoptions": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "weapons": {
+                "items": {
+                    "properties": {
+                        "abilities": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "ap": {
+                            "type": "string"
+                        },
+                        "attacks": {
+                            "type": "string"
+                        },
+                        "damage": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "range": {
+                            "type": "string"
+                        },
+                        "skill": {
+                            "type": "string"
+                        },
+                        "strength": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "ap",
+                        "attacks",
+                        "damage",
+                        "name",
+                        "range",
+                        "skill",
+                        "strength"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            }
+        },
+        "required": [
+            "abilities",
+            "factionname",
+            "flavortext",
+            "keywords",
+            "stats",
+            "unitcompo",
+            "unitname",
+            "wargearoptions",
+            "weapons"
+        ],
+        "type": "object"
+    },
+    "type": "array"
+}
