@@ -139,6 +139,34 @@
                 ],
                 "type": "object"
             },
+            "defaultwargear": {
+                "items": {
+                    "properties": {
+                        "amount": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "only": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "amount",
+                        "name",
+                        "type"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "deployment": {
+                "type": "string"
+            },
             "factionname": {
                 "type": "string"
             },
@@ -217,8 +245,18 @@
                         },
                         "type": "array"
                     },
-                    "leaderrule": {
-                        "type": "string"
+                    "rule": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
                     },
                     "supremecommander": {
                         "type": "string"
@@ -228,7 +266,22 @@
                     },
                     "units": {
                         "items": {
-                            "type": "string"
+                            "properties": {
+                                "amount": {
+                                    "type": "string"
+                                },
+                                "rule": {
+                                    "type": "string"
+                                },
+                                "unit": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "amount",
+                                "unit"
+                            ],
+                            "type": "object"
                         },
                         "type": "array"
                     }
@@ -295,6 +348,7 @@
         },
         "required": [
             "abilities",
+            "defaultwargear",
             "factionname",
             "flavortext",
             "keywords",
